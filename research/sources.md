@@ -1,7 +1,8 @@
-# Sources
 
-| Expert | Platform | Link | Why Chosen | Date |
+| Expert       | Best For   |
+| ------------ | ---------- |
+| Chris Walker | Demand Gen |
+| Hormozi      | Hooks      |
+| Gerhardt     | Brand      |
 
-|-------|----------|------|-----------|------|
 
-| TBD | YouTube | TBD | Industry practitioner | 2026-04-19 |
