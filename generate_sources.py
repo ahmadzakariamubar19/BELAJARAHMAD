@@ -1,19 +1,39 @@
 import os
 
-data = [
-    ["Chris Walker", "YouTube", "https://youtube.com/@chriswalker", "Strong B2B demand generation expert"],
-    ["Dave Gerhardt", "LinkedIn", "https://linkedin.com/in/davegerhardt", "Strong B2B branding expert"],
-    ["Alex Hormozi", "YouTube", "https://youtube.com/@AlexHormozi", "Great content hooks and offers"]
+experts = [
+    {
+        "name": "Chris Walker",
+        "platform": "YouTube",
+        "link": "https://youtube.com/@chriswalker",
+        "why": "Strong B2B SaaS demand generation operator",
+        "focus": "Demand Gen"
+    },
+    {
+        "name": "Dave Gerhardt",
+        "platform": "LinkedIn",
+        "link": "https://linkedin.com/in/davegerhardt",
+        "why": "Strong B2B brand-led growth strategist",
+        "focus": "Brand"
+    },
+    {
+        "name": "Alex Hormozi",
+        "platform": "YouTube",
+        "link": "https://youtube.com/@AlexHormozi",
+        "why": "Excellent hooks and audience capture",
+        "focus": "Hooks"
+    }
 ]
 
 os.makedirs("research", exist_ok=True)
 
 with open("research/sources.md", "w") as f:
     f.write("# Sources\n\n")
-    f.write("| Expert | Platform | Link | Why Chosen |\n")
-    f.write("|---|---|---|---|\n")
+    f.write("| Expert | Platform | Link | Why Chosen | Focus |\n")
+    f.write("|---|---|---|---|---|\n")
 
-    for row in data:
-        f.write(f"| {row[0]} | {row[1]} | {row[2]} | {row[3]} |\n")
+    for e in experts:
+        f.write(
+            f"| {e['name']} | {e['platform']} | {e['link']} | {e['why']} | {e['focus']} |\n"
+        )
 
-print("Done")
+print("sources.md generated successfully!")
